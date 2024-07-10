@@ -65,3 +65,11 @@ function increasePersonAge(person) {
 const updatedPersonOne = increasePersonAge(personOne);
 console.log(personOne.age);
 console.log(updatedPersonOne.age);
+
+//колбэк функция
+
+function printMyName() {
+  console.log('Mike');
+}
+console.log('start');
+setTimeout(printMyName, 2000);
