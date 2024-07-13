@@ -39,3 +39,6 @@ o7 = 'Cat' || false; // t || f вернёт "Cat"
 o8 = '' || false; // f || f вернёт false
 o9 = false || ''; // f || f вернёт ""
 o10 = false || varObject; // f || object вернёт varObject
+
+let s = 10;
+s && console.log('executed');
