@@ -55,7 +55,7 @@ console.log(personOne.age);
 increasePersonAge(personTwo);
 console.log(personTwo.age);
 
-//чтобы избежать мутации
+//чтобы избежать мутации.
 function increasePersonAge(person) {
   const updatedPerson = Object.assign({}, person);
   updatedPerson.age += 1;
