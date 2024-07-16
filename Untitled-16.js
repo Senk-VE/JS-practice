@@ -18,13 +18,6 @@ const fruits = ['apple', 'orange'];
 const [appleOne, orangeOne] = fruits; // переменные указываются в квадратных скобках.
 console.log(appleOne, orangeOne); // Новые переменные будут соответствовать порядку индексу в массиве, т.е. порядок имеет значение.
 
-// деструктуризация в функциях
-// const userProfile = {
-//     name: 'Charley',
-//     commentsQty: 23,
-//     hasSignAgreement: false,
-//   };
-
 const userInfo = ({ name, commentsQty }) => {
   if (!commentsQty) {
     return `User ${name} has no comments`;
