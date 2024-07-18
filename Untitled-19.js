@@ -48,3 +48,105 @@ for (let m = 0; m < myArrayFor.length; m++) {
 myArrayFor.forEach((element, index) => {
   console.log(element, index);
 }); // first 0  second 1  third 2
+
+//цикл While. Цикл выполняется пока условие правдиво. Блок инструкций, может быть ниразу не выполнен
+//while (условие) {блок кода, выполняемый на каждой итерации}
+//пример
+
+let f = 0;
+while (f < 5) {
+  console.log(f); // выведет от 0 до 4.
+  f++; //изменение переменной влияющей на условие, без нее будет бесконечный цикл, чего допускать
+}
+
+//цикл. 'while' может ниразу не выполниться, если условие изначальное ложно
+// А вот 'do while' выполнится хотя бы один раз, потому что инструкция начинается с 'do'
+// do {блок кода, выполняемый на каждой итерации} while (условие)
+//цикл выполняется пока условие правдиво
+
+let r = 0;
+do {
+  console.log(r);
+  r++;
+} while (r < 7); // от 0 до 6
+
+//Цикл 'for in'.
+// 'for' (key 'in' Object) {
+//действие с каждым свойством объекта
+//Значения свойства - Object[key] }
+
+// key - Это название каждого свойства объекта.
+// А получить значения к свойству объекта можно с помощью квадратных скобок, потому что 'key' Это переменная в этом блоке, и будет менятся
+
+const myObject1 = {
+  x: 10,
+  y: true,
+  z: 'abc',
+};
+
+for (const key in myObject1) {
+  console.log(key, myObject1[key]);
+}
+// x 10
+// y true
+// z abc
+
+// forEach для объектов
+
+const myObject2 = {
+  x: 10,
+  y: true,
+  z: 'abc',
+};
+
+Object.keys(myObject2).forEach((key) => {
+  console.log(key + ': ' + myObject2[key]);
+});
+
+// x: 10
+// y: true
+// z: abc
+
+// можно перебирать сразу значения свойств объекта, с помощью Object.values
+
+Object.values(myObject2).forEach((value) => {
+  console.log(value);
+});
+
+//10
+//true
+//abc
+
+//For in для массивов. но forEach намного лучше!!!
+
+const myArray2 = [true, 10, 'abc', null];
+for (const key in myArray2) {
+  console.log(myArray[key]);
+}
+// true
+// abc
+// 10
+// undefined
+
+//Цикл 'for of' появился в 2015 ES6
+
+// for of для строк (Element of Iterable) {
+//   //действие с определенным элементом
+// }
+
+const myString = 'Hey';
+for (const letter of myString) {
+  console.log(letter); // выводит 'H' 'e' 'y' по буквам
+}
+
+//for of для массива. НЕ для объектов
+
+const myArrayForOf = [true, 10, 'abc', null];
+myArrayForOf.forEach((element) => {
+  console.log(element);
+});
+
+// true
+// 10
+// abc
+// null
