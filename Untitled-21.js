@@ -46,3 +46,19 @@ const thirdComment = new Comment('Third comment');
 // Статические методы
 
 console.log(Comment.mergeComments('First comment', 'Second comment')); // First comment Second comment
+
+// Расширение других классов
+class NumbersArray extends Array {
+  // расширение класса Array.
+  sum() {
+    return this.reduce((el, acc) => acc + el, 0);
+  }
+}
+
+const myArray = new NumbersArray(2, 5, 7);
+console.log(myArray);
+myArray.sum();
+
+//Что такое прототип
+
+console.log(Comment.prototype === firstComment.__proto__); // true
