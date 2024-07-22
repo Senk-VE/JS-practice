@@ -62,3 +62,8 @@ myArray.sum();
 //Что такое прототип
 
 console.log(Comment.prototype === firstComment.__proto__); // true
+
+// Строки и числа ведут себя как объекты
+
+const myName = 'Norman';
+console.dir(myName);
