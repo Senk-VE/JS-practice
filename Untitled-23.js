@@ -38,7 +38,7 @@ const asyncFn = async () => {
 asyncFn()
 
 // async/await
-const getData = async => {
+const getData = async (url) => {
   const res = await fetch(url)
   const json = await res.json()
   return json
@@ -47,5 +47,22 @@ const getData = async => {
 getData ('https://jsonplaceholder.typicode.com/todos/1')
 .then(data => console.log(data))
 .catch(error => console.log(error.message))
+// будет ощибка failed to fetch
+
+// обработка ошибок Try/catch
+
+const getData = async (url) => {
+  const res = await fetch(url)
+  const json = await res.json()
+  return json
+}
+
+const url = 'https://jsonplaceholder.typicode.com/todos'
+try {
+  const data = await getData(url)
+  console.log(data)
+} catch (error) {
+  console.log(error.message))
+}
 
 
