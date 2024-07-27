@@ -24,12 +24,29 @@ console.log(str.substr(7, 5)); // "World"
 console.log(str.substr(7)); // "World!" // Если length не указан, извлечение продолжается до конца строки
 
 // setTimeout (встроенная асинхронная функция) которая выдает задержку в милисекундах
+//пример.
 setTimeout(callbackFunction, delayInMilliseconds, [arg1, arg2, ...]); // синтаксис
 //пример
 function greet(name) {
   console.log(`Привет, ${name}!`);
 }
 setTimeout(greet, 1500, 'Алекс');
+// отменяет выполнение
+clearTimeout(timerId); // Отменяет выполнение функции
+//setInterval
+setInterval(function, interval, [arg1, arg2, ...]); 
+clearInterval(intervalId); // clearInterval останавливает выполнение функции, если она больше не нужна.
+//пример
+let count = 0;
+const intervalId = setInterval(printMessage, 2000);
+
+function printMessage() {
+  count++;
+  console.log(`Сообщение номер ${count}`);
+  if (count >= 5) {
+    clearInterval(intervalId);
+  }
+}
 
 // Оператор %
 // Проверка на четность
