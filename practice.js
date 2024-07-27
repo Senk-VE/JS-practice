@@ -23,6 +23,14 @@ let str = 'Hello, World!'; // str.substr(start, length)
 console.log(str.substr(7, 5)); // "World"
 console.log(str.substr(7)); // "World!" // Если length не указан, извлечение продолжается до конца строки
 
+// setTimeout (встроенная асинхронная функция) которая выдает задержку в милисекундах
+setTimeout(callbackFunction, delayInMilliseconds, [arg1, arg2, ...]); // синтаксис
+//пример
+function greet(name) {
+  console.log(`Привет, ${name}!`);
+}
+setTimeout(greet, 1500, 'Алекс');
+
 // Оператор %
 // Проверка на четность
 let number = 7;
