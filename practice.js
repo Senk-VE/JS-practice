@@ -37,16 +37,15 @@ clearTimeout(timerId); // Отменяет выполнение функции
 setInterval(function, interval, [arg1, arg2, ...]); 
 clearInterval(intervalId); // clearInterval останавливает выполнение функции, если она больше не нужна.
 //пример
-let count = 0;
-const intervalId = setInterval(printMessage, 2000);
-
-function printMessage() {
+let count = 0; // Счетчик для отслеживания количества сообщений
+function printMessage() { // Функция, которая будет выполняться каждые 2 секунды
   count++;
   console.log(`Сообщение номер ${count}`);
-  if (count >= 5) {
-    clearInterval(intervalId);
+  if (count >= 5) {  // Проверка, достигли ли мы 5 сообщений
+    clearInterval(intervalId); // Остановка интервала
   }
 }
+const intervalId = setInterval(printMessage, 2000); // Устанавливаем интервал, который вызывает функцию printMessage каждые 2000 миллисекунд (2 секунды)
 
 // Оператор %
 // Проверка на четность
