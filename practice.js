@@ -74,5 +74,8 @@ array.splice(array.length, 0, 6, 7); // (start, deleteCount, item1, item2, ...)
 console.log(array); // [1, 2, 3, 4, 5, 6, 7]
 
 // перебор массива forEach
-const myArray = ['apple', 'banana', 'pear'];
-myArray.forEach((fruit) => console.log(`fruit: ${fruit}`));
+const myObject = {  key1: true,  key5: 10,  key3: 'abc',  key4: null,  key10: NaN,}
+const objectKeys = Object.keys(myObject)
+objectKeys.forEach((key) => {
+  if (key === 'key1' || key === 'key3') {
+    console.log(myObject[key])  }})
