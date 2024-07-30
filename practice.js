@@ -95,6 +95,18 @@ objectKeys.forEach((key) => {
   if (key === 'key1' || key === 'key3') {
     console.log(myObject[key])  }})
 
+//тернарный оператор. явный и неявный возврат результата
+//явный возврат результата
+const isArrayEmpty = (inputArray) => {
+return inputArray.length > 0 ? `Массив не пустой` : `Массив пустой`; // условие ? выражение(истина) : выражение (ложно) 
+};
+// неявный возврат результата
+const isArrayEmpty = (inputArray) => // при условии что тело стрелочной функции выражение!
+inputArray.length > 0 ? `Массив не пустой` : `Массив пустой`; // не требуется return
+    
+console.log(isArrayEmpty([1, 3]));
+console.log(isArrayEmpty([]));
+
 // Генератор случайных чисел
 //
 const MIN = 1000
