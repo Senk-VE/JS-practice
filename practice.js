@@ -86,16 +86,15 @@ const MIN = 1000
 const MAX = 9999
 const myNumbers = [2355, 7235, 8135, 1762, 2361, 8351]
 const randomNumber = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1) + min)
-}
+  return Math.floor(Math.random() * (max - min + 1) + min) //Math.floor округляет число вниз до ближайшего целого
+} //Math.random генерирует псевдослучайное число с плавающей запятой от 0 (включительно) до 1 (не включительно)
 const addRandomNumberToArray = (arr, min, max) => {
   let newRandomNumber
-  const updatedArr = [...arr]
-  do {
+  const updatedArr = [...arr] // с помощью оператора spread создаем новый массив, чтобы не было мутации
+  do { // выполняет код как минимум один раз
     newRandomNumber = randomNumber(min, max)
-    // console.log(newRandomNumber)
-  } while (updatedArr.includes(newRandomNumber))
-  updatedArr.push(newRandomNumber)
+  } while (updatedArr.includes(newRandomNumber)) // если условие while = true, цикл повторяется, до тех пока не буде false
+  updatedArr.push(newRandomNumber) // .push добавляет в конец массива новое значение
   return updatedArr
 }
 const updatedArray = addRandomNumberToArray(myNumbers, MIN, MAX)
