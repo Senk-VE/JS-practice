@@ -61,6 +61,21 @@ let divisor = 3;
 let remainder = dividend % divisor;
 console.log(remainder); // Выведет 1
 
+//Объекты
+//Метод for in, а также также проверка .hasOwnProperty
+const myObject = {
+  name: 'Mike',
+  age: 30,
+  city: 'London',
+};
+
+Object.prototype.country = 'England';// изменяет глобальный прототип всех объектов в JavaScript, что может вызвать нежелательные побочные эффекты
+for (let key in myObject) {
+  if (myObject.hasOwnProperty(key)) { // hasOwnProperty позволяет точно определить, принадлежит ли свойство непосредственно объекту
+    console.log(myObject[key]);
+  }
+}
+
 // Массив
 // замена элемента массива, где первый элемент массива имеет индекс 0
 const myArray = ['abbc', true, 846];
