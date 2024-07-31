@@ -95,13 +95,13 @@ objectKeys.forEach((key) => {
   if (key === 'key1' || key === 'key3') {
     console.log(myObject[key])  }})
 
-    // перебор массива forEach
-    const myCities = ['London', 'New York', 'Singapore']
+// перебор массива forEach
+const myCities = ['London', 'New York', 'Singapore']
 
 const cityInfo = (city, index) =>
   `${city} is at the index ${index} in the myCities array`
 
-myCities.forEach((city, index) => console.log(cityInfo(city, index)))
+myCities.forEach((city, index) => console.log(cityInfo(city, index))) // синтаксис .forEach(колбэк функция с тремя аргументами, элемент, индекс и ссылка на массив)
 
 //тернарный оператор. явный и неявный возврат результата
 //явный возврат результата
