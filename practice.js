@@ -88,12 +88,20 @@ let array = [1, 2, 3, 4, 5];
 array.splice(array.length, 0, 6, 7); // (start, deleteCount, item1, item2, ...)
 console.log(array); // [1, 2, 3, 4, 5, 6, 7]
 
-// перебор массива forEach
+// перебор объекта forEach
 const myObject = {  key1: true,  key5: 10,  key3: 'abc',  key4: null,  key10: NaN,}
 const objectKeys = Object.keys(myObject)
 objectKeys.forEach((key) => {
   if (key === 'key1' || key === 'key3') {
     console.log(myObject[key])  }})
+
+    // перебор массива forEach
+    const myCities = ['London', 'New York', 'Singapore']
+
+const cityInfo = (city, index) =>
+  `${city} is at the index ${index} in the myCities array`
+
+myCities.forEach((city, index) => console.log(cityInfo(city, index)))
 
 //тернарный оператор. явный и неявный возврат результата
 //явный возврат результата
