@@ -103,6 +103,13 @@ const cityInfo = (city, index) =>
 
 myCities.forEach((city, index) => console.log(cityInfo(city, index))) // синтаксис .forEach(колбэк функция с тремя аргументами, элемент, индекс и ссылка на массив)
 
+// метод .map массив с объектами
+const arrayJSON = postsJSON.map((postsJSON) => JSON.parse(postsJSON)); //.map ((элемент, индекс, массив) => {Возвращаемое значение для нового массива}
+console.log(arrayJSON);
+console.log(arrayJSON[1].postId); // получаем доступ ко второму объекту с ключем postId
+console.log(arrayJSON[arrayJSON.length - 1].commentsQuantity); // получаем доступ к значению последнего свойства
+
+
 //тернарный оператор. явный и неявный возврат результата
 //явный возврат результата
 const isArrayEmpty = (inputArray) => {
