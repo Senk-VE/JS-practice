@@ -109,6 +109,17 @@ console.log(arrayJSON);
 console.log(arrayJSON[1].postId); // получаем доступ ко второму объекту с ключем postId
 console.log(arrayJSON[arrayJSON.length - 1].commentsQuantity); // получаем доступ к значению последнего свойства
 
+// метод .find
+const posts = [
+  { postId: 1355, commentsQuantity: 5 },
+  { postId: 5131, commentsQuantity: 13 },
+  { postId: 6134, commentsQuantity: 2 },
+];
+const findPostById = (postId, postArray) => {
+  return postArray.find((post) => post.postId === postId); // .find(callback(element))
+}; // проверяет ID , если истинно, то возвращает значение, если ложно - возвращает undefined
+console.log(findPostById(6134, posts)); // { postId: 6134, commentsQuantity: 2 }
+console.log(findPostById(4511, posts)); // undefined
 
 //тернарный оператор. явный и неявный возврат результата
 //явный возврат результата
