@@ -52,3 +52,13 @@ const areArraysEqual = (firstArray, secondArray) => {
 console.log(areArraysEqual(a, b)); // true
 console.log(areArraysEqual(a, c)); // false
 console.log(areArraysEqual(a, d)); // false
+
+//метод .includes
+const transports = ['Bus', 'Car', 'Bicycle', 'Airplane'];
+
+const isElementInArray = (inputArray, searchElement) => {
+  return inputArray.includes(searchElement); // возвращает true если нашелся искомый элемент, возвращает false если нет
+};
+console.log(isElementInArray(transports, 'Bus')); // true
+console.log(isElementInArray(transports, 'Phone')); // false
+console.log(isElementInArray(transports, 'Airplane')); // true
