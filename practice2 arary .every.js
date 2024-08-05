@@ -62,3 +62,15 @@ const isElementInArray = (inputArray, searchElement) => {
 console.log(isElementInArray(transports, 'Bus')); // true
 console.log(isElementInArray(transports, 'Phone')); // false
 console.log(isElementInArray(transports, 'Airplane')); // true
+
+//
+const isElementInArray = (searchElement, inputArray) => {
+  if (typeof searchElement !== 'object') {
+    // проверка является ли элемент объектом
+    return inputArray.includes(searchElement); // если искомый элемент это не объект, а значение, он возвращает true или false
+  }
+
+  return inputArray // если элемент является объектом,
+    .map((element) => JSON.stringify(element)) // .map преобразует каждый элемент массива в строку
+    .includes(JSON.stringify(searchElement)); // Проверяет, есть ли строка JSON, представляющая searchElement, в массиве строк JSON
+};
