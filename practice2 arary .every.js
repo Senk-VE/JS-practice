@@ -74,3 +74,13 @@ const isElementInArray = (searchElement, inputArray) => {
     .map((element) => JSON.stringify(element)) // .map преобразует каждый элемент массива в строку
     .includes(JSON.stringify(searchElement)); // Проверяет, есть ли строка JSON, представляющая searchElement, в массиве строк JSON
 };
+
+//поиск и вывод простого значения, при отсутствии добавляет в массив
+const myNumbers = [123, 50, 27];
+
+const pushIfUnique = (inputArray, newElement) => {
+  if (inputArray.includes(newElement)) {
+    return console.log(`${newElement} уже в массиве`); // return обязателен так как останавливает выполнение кода
+  }
+  return inputArray.push(newElement);
+};
